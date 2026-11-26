@@ -613,3 +613,26 @@ details[open] summary { margin-bottom: 8px; }
   .ficha-meses { grid-template-columns: repeat(3, 1fr); }
 }
 @media (max-width: 640px) { .fd-mais { display: none; } }
+
+/* celulares estreitos (iPhone SE e afins): nada pode passar da largura da tela */
+.painel-corpo > *, .kpi, .bloco, .grade-2 > *, .grade-caixa > *, .grade-pdv > * { min-width: 0; }
+.kpis, .kpis-3, .kpis-4 { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+.kpis-3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+.grade-2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+@media (max-width: 1180px) { .kpis, .kpis-4 { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 920px) { .grade-2 { grid-template-columns: minmax(0, 1fr); } }
+@media (max-width: 640px) { .kpis, .kpis-3, .kpis-4, .resumo-mes .rm-num { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 400px) {
+  .kpi { padding: 12px 12px; }
+  .kpi strong { font-size: 1.05rem; }
+  .painel-corpo { padding-left: 12px; padding-right: 12px; }
+  .ct-acoes .btn { white-space: normal; font-size: .8rem; padding: 8px 6px; }
+  .cartao-treino .titulo-g { font-size: 2.5rem; }
+  .al-corpo { padding: 12px; }
+}
+.al-corpo > *, .evento > *, .ev-corpo > * { min-width: 0; }
+.ferr-dir .btn { min-width: 0; }
+@media (max-width: 400px) {
+  .btn { white-space: normal; text-align: center; }
+  .bloco-cab { flex-wrap: wrap; }
+}
